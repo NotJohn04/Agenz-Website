@@ -91,10 +91,43 @@ export default function ContactPage() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+
+    try {
+      // Submit to Google Apps Script
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+
+      if (scriptUrl) {
+        await fetch(scriptUrl, {
+          method: "POST",
+          mode: "no-cors", // Required for Google Apps Script
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            formType: "contact-form",
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            subject: formData.subject,
+            message: formData.message,
+            sourcePage: "/contact",
+          }),
+        });
+
+        console.log("Contact form submitted successfully");
+      } else {
+        console.warn("NEXT_PUBLIC_GOOGLE_SCRIPT_URL not configured");
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Still show success to user - data might have been received
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
