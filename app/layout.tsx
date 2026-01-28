@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://agenz.my"),
   title: {
     default: "Agenz.my | AI-Powered Marketing & Automation Agency",
     template: "%s | Agenz.my",
