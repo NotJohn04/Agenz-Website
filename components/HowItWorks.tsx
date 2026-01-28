@@ -9,6 +9,10 @@ import {
   IconTrendingUp,
 } from "@tabler/icons-react";
 
+interface HowItWorksProps {
+  onOpenLeadForm?: () => void;
+}
+
 const steps = [
   {
     number: "01",
@@ -124,7 +128,7 @@ function StepCard({
   );
 }
 
-export function HowItWorks() {
+export function HowItWorks({ onOpenLeadForm }: HowItWorksProps) {
   const headerRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
 
@@ -180,12 +184,12 @@ export function HowItWorks() {
           <p className="text-white/50 mb-6">
             Ready to start your journey?
           </p>
-          <a
-            href="#contact"
+          <button
+            onClick={onOpenLeadForm}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] hover:-translate-y-1"
           >
             Start Your Discovery Call
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

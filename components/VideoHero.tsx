@@ -132,7 +132,7 @@ export function VideoHero({ onOpenLeadForm }: VideoHeroProps) {
           className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-12"
         >
           {[
-            { value: "50+", label: "Clients Served" },
+            { value: "20+", label: "Clients Served" },
             { value: "3x", label: "Average ROAS" },
             { value: "<30s", label: "AI Response Time" },
             { value: "40%", label: "Lower CAC" },

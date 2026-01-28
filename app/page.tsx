@@ -25,6 +25,13 @@ import SolarSunyield from "@/components/partners/solarsunyield.png";
 import raygosolar from "@/components/partners/Untitled design (13).png";
 import AD from "@/components/partners/Untitled design (14).png";
 import IPS from "@/components/partners/logo_footer.png";
+import IJRVenture from "@/components/partners/realIJRventure.png";
+import Vantage from "@/components/partners/whitevantage.png";
+import TwentyThree from "@/components/partners/twentythree.png";
+import TrueBioScience from "@/components/partners/truebioscience.png";
+import Macglo from "@/components/partners/Macglo.png";
+import Geosav from "@/components/partners/geosav.png";
+import ElevatedStudios from "@/components/partners/elevatedstud.png";
 
 export default function Home() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
@@ -55,6 +62,13 @@ export default function Home() {
             { src: Solarock, alt: "Solarock" },
             { src: Rewatts, alt: "R Brand" },
             { src: IPS, alt: "IPS" },
+            { src: IJRVenture, alt: "IJR Venture" },
+            { src: Vantage, alt: "Steel Works Sdn Bhd" },
+            { src: TwentyThree, alt: "Twenty 3 Florist" },
+            { src: TrueBioScience, alt: "True BioScience" },
+            { src: Macglo, alt: "Macglo" },
+            { src: Geosav, alt: "Geosav" },
+            { src: ElevatedStudios, alt: "Elevated Studios" },
           ]}
           speed={33}
           logoHeight={64}
@@ -69,7 +83,7 @@ export default function Home() {
       <ServicesGrid />
 
       {/* How It Works */}
-      <HowItWorks />
+      <HowItWorks onOpenLeadForm={openLeadForm} />
 
       {/* Results & Testimonials */}
       <Results />

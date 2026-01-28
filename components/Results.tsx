@@ -2,14 +2,20 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { IconUser } from "@tabler/icons-react";
+
+// Import testimonial avatars
+import MaxThamAvatar from "@/components/partners/MaxTham.png";
+import JustinYeeAvatar from "@/components/partners/JustinYee.png";
+import JechoniasSushantAvatar from "@/components/partners/JechoniasSushant.png";
 
 type Testimonial = {
   quote: string;
   author: string;
   role: string;
   company: string;
-  avatar: string;
+  avatar?: string | StaticImageData;
 };
 
 type Stat = {
@@ -62,39 +68,34 @@ export function Results() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "Our WhatsApp follow-ups became instant. Conversion rate jumped 40% in the first month. The AI knows exactly when and how to reach out.",
-      author: "Sarah Chen",
-      role: "Founder",
-      company: "Fashion E-commerce",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=320&h=320&auto=format&fit=facearea&facepad=2",
+        "Really appreciate the service from Agenz. The team was always eager to help and delivered everything as promised. They managed our campaigns, built automation systems, revamped our website, and even recorded a video for us. Great job all around.",
+      author: "Max Tham Weng How",
+      role: "Group Managing Director",
+      company: "Kemuning Structures & Vantage Steel",
+      avatar: MaxThamAvatar,
     },
     {
       quote:
-        "The AI chatbot handles 80% of inquiries automatically. Our team can finally focus on closing deals instead of answering repetitive questions.",
-      author: "Marcus Tan",
+        "Agenz built automation for our company that changed everything. We used to manually update all our lists - it was either hire someone or do it ourselves. All that repetitive work? Gone. Agenz handles it all now. Literally replaced a whole job.",
+      author: "Nicholas Puah",
       role: "CEO",
-      company: "HR Tech Startup",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=320&h=320&auto=format&fit=facearea&facepad=2",
+      company: "Elevated Studios",
     },
     {
       quote:
-        "Lead distribution and automated follow-ups transformed our sales pipeline. Best investment we've made this year.",
-      author: "David Lim",
-      role: "Director",
-      company: "Property Developer",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=320&h=320&auto=format&fit=facearea&facepad=2",
+        "In the first week of working with Agenz, they ran a campaign that easily topped all our previous ones. Just based on cost per lead alone, it ranked in our top 10 lowest ever. And the quality was solid too - not just cheap leads, actually good ones.",
+      author: "Justin Yee",
+      role: "CEO",
+      company: "TwentyThree Florist",
+      avatar: JustinYeeAvatar,
     },
     {
       quote:
-        "From ads to WhatsApp to booking - everything is automated. We've scaled to 5 outlets without adding sales staff.",
-      author: "Amy Wong",
-      role: "Operations Manager",
-      company: "Restaurant Chain",
-      avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=320&h=320&auto=format&fit=facearea&facepad=2",
+        "Amazing service!! Truly grateful to Agenz for putting in the effort - they were literally working day and night on our campaign. I'd see messages popping up in the chat at 3am, working on the project non-stop. All that dedication for an affordable price too.",
+      author: "Jechonias Sushant",
+      role: "CEO",
+      company: "Geosav",
+      avatar: JechoniasSushantAvatar,
     },
   ];
 
@@ -205,13 +206,17 @@ export function Results() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="relative h-12 w-12 rounded-full overflow-hidden bg-white/10 flex items-center justify-center">
+                  {testimonial.avatar ? (
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.author}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <IconUser className="h-6 w-6 text-white/40" />
+                  )}
                 </div>
                 <div>
                   <p className="font-semibold text-white">{testimonial.author}</p>
