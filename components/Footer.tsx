@@ -59,17 +59,17 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-8 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="/" className="inline-flex items-center gap-2 mb-6">
-              <div className="relative h-10 w-10">
+            <a href="/" className="inline-flex items-center gap-3 mb-6">
+              <div className="relative h-[36px] w-[36px]">
                 <Image
-                  src="/images/logo.png"
-                  alt="Agenz.my"
+                  src="/images/logo5.png"
+                  alt="AGENZ.MY"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold text-white">
-                Agenz<span className="text-blue-500">.my</span>
+              <span className="text-2xl font-bold text-white tracking-wide">
+                AGENZ.MY
               </span>
             </a>
             <p className="text-white/60 max-w-sm mb-6">
@@ -178,14 +178,14 @@ export function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8" />
 
         {/* Text Hover Effect */}
-        <div className="flex justify-center mb-8 h-24 sm:h-32">
-          <TextHoverEffect text="AGENZ" />
+        <div className="flex justify-center mb-8 h-16 sm:h-24 md:h-40 lg:h-48">
+          <TextHoverEffect text="AGENZ.MY" />
         </div>
 
         {/* Copyright */}
         <div className="text-center">
           <p className="text-sm text-white/40">
-            &copy; {new Date().getFullYear()} Agenz MY. All rights reserved.
+            &copy; {new Date().getFullYear()} AGENZ.MY. All rights reserved.
           </p>
         </div>
       </div>

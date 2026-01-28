@@ -146,18 +146,18 @@ export function Navbar({ onOpenLeadForm }: NavbarProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between lg:h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2 relative z-50">
-              <div className="relative h-8 w-8 lg:h-10 lg:w-10">
+            <a href="/" className="flex items-center gap-3 relative z-50">
+              <div className="relative h-[32px] w-[32px] lg:h-[40px] lg:w-[40px]">
                 <Image
-                  src="/images/logo1.png"
-                  alt="Agenz.my"
+                  src="/images/logo5.png"
+                  alt="AGENZ.MY"
                   fill
                   className="object-contain"
                   priority
                 />
               </div>
-              <span className="text-lg font-bold text-white lg:text-xl">
-                Agenz<span className="text-blue-500">.my</span>
+              <span className="text-xl font-bold text-white lg:text-2xl tracking-wide">
+                AGENZ.MY
               </span>
             </a>
 

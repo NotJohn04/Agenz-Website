@@ -16,7 +16,7 @@ export function VideoHero({ onOpenLeadForm }: VideoHeroProps) {
   const words = headline.split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-24">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         {/* Placeholder/Fallback Background */}
@@ -31,7 +31,6 @@ export function VideoHero({ onOpenLeadForm }: VideoHeroProps) {
           onLoadedData={() => setIsVideoLoaded(true)}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? "opacity-40" : "opacity-0"
             }`}
-          poster="/video-poster.jpg"
         >
           <source src="/video/hero-video.mp4" type="video/mp4" />
         </video>
