@@ -51,7 +51,7 @@ const tiers = [
     features: [
       "Everything in Beginner",
       "AI Creative Posters (up to 40)",
-      "AI Video Production (2/mo)",
+      "AI Video Production (1/mo)",
       "Digital Ads Management",
       "Competitor Research",
       "CRM Setup & Integration",
@@ -81,13 +81,13 @@ const tiers = [
   },
   {
     name: "Enterprise",
-    price: "From RM 10,000",
-    period: "/mo",
+    price: "Custom",
+    period: "",
     badge: "Custom",
     oneTime: null,
     guarantee: false,
     contract: null,
-    discount: "Available",
+    discount: null,
     features: [
       "Everything in Advanced",
       "Unlimited AI Creatives",
@@ -99,6 +99,7 @@ const tiers = [
       "Multi-brand Management",
     ],
     highlighted: false,
+    customCta: "Contact Us",
   },
 ];
 
@@ -253,6 +254,11 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                     {tier.price}
                   </span>
                   <span className="text-white/50 text-sm">{tier.period}</span>
+                  {tier.price === "Custom" && (
+                    <p className="text-sm text-white/50 mt-2">
+                      Contact us for more information
+                    </p>
+                  )}
                 </div>
 
                 {/* Meta Info */}
@@ -301,7 +307,7 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                       : "border border-white/20 text-white hover:bg-white/10 hover:border-white/30"
                   }`}
                 >
-                  Get Started
+                  {"customCta" in tier && tier.customCta ? tier.customCta : "Get Started"}
                 </button>
               </motion.div>
             ))}
