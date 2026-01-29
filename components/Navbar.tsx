@@ -70,7 +70,6 @@ const navItems = [
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Pricing", href: "/pricing", hasDropdown: false },
   { name: "About Us", href: "/about", hasDropdown: false },
-  { name: "Case Studies", href: "/case-studies", hasDropdown: false },
   { name: "Blog", href: "/blog", hasDropdown: false },
   { name: "Contact", href: "/contact", hasDropdown: false },
 ];

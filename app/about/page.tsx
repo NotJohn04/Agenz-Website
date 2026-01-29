@@ -45,35 +45,29 @@ const values = [
 
 const timeline = [
   {
-    year: "2022",
+    year: "2024",
     title: "The Beginning",
     description:
-      "Agenz was founded with a vision to democratize AI-powered marketing for Malaysian businesses.",
-  },
-  {
-    year: "2023",
-    title: "Rapid Growth",
-    description:
-      "Expanded our team and services, launching AI chatbot and automation solutions. Served 50+ clients.",
-  },
-  {
-    year: "2024",
-    title: "Industry Leader",
-    description:
-      "Became a leading AI marketing agency in Malaysia. Launched video AI and advanced automation tools.",
+      "Started in April 2024 as an agency exclusively working with solar companies. We wanted to niche into the solar industry and be the best in the pond before becoming the best in the ocean.",
   },
   {
     year: "2025",
-    title: "Scaling Impact",
+    title: "Dominating Solar",
     description:
-      "Continuing to innovate with next-gen AI solutions and expanding our reach across Southeast Asia.",
+      "Successfully onboarded more than 10 clients in the solar industry and developed a proven method for customer acquisition through automation. We monopolised the solar niche by becoming the best at what we do.",
+  },
+  {
+    year: "2026",
+    title: "Agenz.MY Is Born",
+    description:
+      "Rebranded to Agenz.my to serve every industry. Any company that needs customers, we can help. Our proven systems now power businesses across all sectors.",
   },
 ];
 
 const stats = [
-  { value: "50+", label: "Clients Served" },
+  { value: "20+", label: "Clients Served" },
   { value: "3x", label: "Average ROAS" },
-  { value: "RM 10M+", label: "Revenue Generated" },
+  { value: "RM 357K+", label: "Revenue Generated" },
   { value: "<30s", label: "Lead Response Time" },
 ];
 
@@ -205,8 +199,8 @@ export default function AboutPage() {
               The Journey So Far
             </h2>
             <p className="text-white/60">
-              From a small team with big dreams to a leading AI marketing agency, here&apos;s
-              how we&apos;ve grown.
+              From dominating the solar industry to serving businesses across all sectors,
+              here&apos;s how we&apos;ve grown.
             </p>
           </motion.div>
 
