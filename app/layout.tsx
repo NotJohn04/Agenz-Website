@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -54,6 +55,10 @@ export const metadata: Metadata = {
       "We engineer autonomous growth systems that acquire customers while you sleep.",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: "/images/logo3.png",
+    apple: "/images/logo3.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -67,6 +72,46 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Agenz.my",
+              url: "https://www.agenz.my",
+              logo: "https://www.agenz.my/images/logo3.png",
+              sameAs: [
+                "https://www.instagram.com/agenz_my/",
+                "https://www.facebook.com/agenz.my",
+                "https://www.tiktok.com/@agenz.my",
+                "https://www.linkedin.com/company/agenz-my",
+              ],
+            }),
+          }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Agenz.my",
+              url: "https://www.agenz.my",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://www.agenz.my/?s={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${poppins.variable} font-sans antialiased bg-black text-white`}
       >
