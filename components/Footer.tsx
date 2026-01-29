@@ -40,7 +40,7 @@ const footerLinks = {
 
 const socialLinks = [
   { name: "Facebook", icon: IconBrandFacebook, href: "https://facebook.com/agenz.my" },
-  { name: "Instagram", icon: IconBrandInstagram, href: "https://instagram.com/agenz.my" },
+  { name: "Instagram", icon: IconBrandInstagram, href: "https://www.instagram.com/agenz_my/" },
   { name: "LinkedIn", icon: IconBrandLinkedin, href: "https://linkedin.com/company/agenz-my" },
   { name: "TikTok", icon: IconBrandTiktok, href: "https://tiktok.com/@agenz.my" },
   { name: "YouTube", icon: IconBrandYoutube, href: "https://youtube.com/@agenz.my" },
