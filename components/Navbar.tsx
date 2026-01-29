@@ -149,7 +149,7 @@ export function Navbar({ onOpenLeadForm }: NavbarProps) {
             <a href="/" className="flex items-center gap-3 relative z-50">
               <div className="relative h-[32px] w-[32px] lg:h-[40px] lg:w-[40px]">
                 <Image
-                  src="/images/logo5.png"
+                  src="/images/logo3.png"
                   alt="AGENZ.MY"
                   fill
                   className="object-contain"
