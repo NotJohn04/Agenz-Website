@@ -69,7 +69,7 @@ export function Results() {
     {
       quote:
         "Really appreciate the service from Agenz. The team was always eager to help and delivered everything as promised. They managed our campaigns, built automation systems, revamped our website, and even recorded a video for us. Great job all around.",
-      author: "Max Tham Weng How",
+      author: "Max Tham Weng Hoe",
       role: "Group Managing Director",
       company: "Kemuning Structures & Vantage Steel",
       avatar: MaxThamAvatar,
