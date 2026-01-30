@@ -20,6 +20,7 @@ import {
   IconDatabase,
   IconRobot,
   IconSettings,
+  IconSeo,
   IconArrowRight,
   IconCheck,
   IconBrandInstagram,
@@ -505,6 +506,52 @@ const servicesData: Record<string, {
       { step: "02", title: "Train", description: "Train AI on your products and FAQs." },
       { step: "03", title: "Deploy", description: "Launch across all channels." },
       { step: "04", title: "Optimize", description: "Continuous learning and improvement." },
+    ],
+  },
+  "seo-ppc": {
+    name: "SEO & PPC",
+    icon: IconSeo,
+    tagline: "Get found. Get clicks. Get customers.",
+    description:
+      "Drive sustainable organic traffic with SEO and capture high-intent buyers with PPC advertising. We combine search engine optimization with pay-per-click campaigns to maximize your visibility and ROI across Google and other search engines.",
+    benefits: [
+      "Rank higher on Google for keywords that matter",
+      "Immediate traffic through targeted PPC campaigns",
+      "Lower cost-per-acquisition over time",
+      "Dominate both paid and organic search results",
+      "Data-driven strategy with transparent reporting",
+    ],
+    features: [
+      {
+        title: "Technical SEO Audit",
+        description: "Full site audit covering speed, indexing, structure, and mobile-friendliness to fix what's holding your rankings back.",
+      },
+      {
+        title: "Keyword Research & Strategy",
+        description: "Identify high-value keywords your customers are searching for and build a content plan to rank for them.",
+      },
+      {
+        title: "On-Page & Off-Page SEO",
+        description: "Optimize your pages, meta tags, content, and backlink profile to build authority and climb rankings.",
+      },
+      {
+        title: "Google Ads Management",
+        description: "Search, display, and shopping campaigns managed end-to-end — from ad copy to bid strategy to conversion tracking.",
+      },
+      {
+        title: "Landing Page Optimization",
+        description: "Build and optimize high-converting landing pages that turn ad clicks into leads and sales.",
+      },
+      {
+        title: "Monthly Reporting & Insights",
+        description: "Clear reports showing keyword rankings, traffic growth, ad performance, and ROI so you always know what's working.",
+      },
+    ],
+    process: [
+      { step: "01", title: "Audit & Research", description: "Analyze your current search presence, competitors, and target keywords." },
+      { step: "02", title: "Strategy & Setup", description: "Build your SEO roadmap and launch PPC campaigns with proper tracking." },
+      { step: "03", title: "Execute & Optimize", description: "Implement on-page changes, publish content, and refine ad performance." },
+      { step: "04", title: "Scale & Report", description: "Double down on what works, scale winning campaigns, and report results monthly." },
     ],
   },
   automation: {

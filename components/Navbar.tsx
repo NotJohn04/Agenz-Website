@@ -23,6 +23,7 @@ import {
   IconCalendar,
   IconSettings,
   IconChevronDown,
+  IconSeo,
 } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -51,6 +52,7 @@ const serviceCategories = [
       { name: "Website Design", href: "/services/website-design", icon: IconWorld },
       { name: "Website Development", href: "/services/website-development", icon: IconCode },
       { name: "Website Hosting", href: "/services/website-hosting", icon: IconServer },
+      { name: "SEO & PPC", href: "/services/seo-ppc", icon: IconSeo },
     ],
   },
   {
