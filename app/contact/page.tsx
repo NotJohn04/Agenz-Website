@@ -41,8 +41,8 @@ const contactInfo = [
   {
     icon: IconMapPin,
     label: "Location",
-    value: "Kuala Lumpur, Malaysia",
-    href: "#",
+    value: "L5-15, IKON Connaught, 160, Jalan Cerdas, Taman Connaught, 56000 Kuala Lumpur",
+    href: "https://maps.google.com/?q=IKON+Connaught+160+Jalan+Cerdas+Taman+Connaught+56000+Kuala+Lumpur",
   },
 ];
 
@@ -227,9 +227,8 @@ export default function ContactPage() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                            errors.name ? "border-red-500" : "border-white/10"
-                          } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors`}
+                          className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.name ? "border-red-500" : "border-white/10"
+                            } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors`}
                           placeholder="John Doe"
                         />
                         {errors.name && (
@@ -249,9 +248,8 @@ export default function ContactPage() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                            errors.email ? "border-red-500" : "border-white/10"
-                          } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors`}
+                          className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.email ? "border-red-500" : "border-white/10"
+                            } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors`}
                           placeholder="john@company.com"
                         />
                         {errors.email && (
@@ -345,9 +343,8 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
-                        className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                          errors.message ? "border-red-500" : "border-white/10"
-                        } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors resize-none`}
+                        className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.message ? "border-red-500" : "border-white/10"
+                          } text-white placeholder-white/40 focus:outline-none focus:border-blue-500 transition-colors resize-none`}
                         placeholder="Tell us about your project or question..."
                       />
                       {errors.message && (
@@ -478,13 +475,19 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden h-96 flex items-center justify-center"
+            className="rounded-2xl border border-white/10 bg-white/5 overflow-hidden h-96"
           >
-            <div className="text-center">
-              <IconMapPin className="h-16 w-16 text-white/20 mx-auto mb-4" />
-              <p className="text-white/40">Interactive map coming soon</p>
-              <p className="text-sm text-white/30 mt-2">Kuala Lumpur, Malaysia</p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8!2d101.7308!3d3.1292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37a1a8555555%3A0x0!2sIKON+Connaught%2C+160%2C+Jalan+Cerdas%2C+Taman+Connaught%2C+56000+Kuala+Lumpur!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Agenz Office Location"
+              className="w-full h-full"
+            />
           </motion.div>
         </div>
       </section>

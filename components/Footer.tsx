@@ -95,7 +95,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-white/60">
                 <IconMapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span>Kuala Lumpur, Malaysia</span>
+                <span>L5-15, IKON Connaught, 160, Jalan Cerdas, Taman Connaught, 56000 Kuala Lumpur</span>
               </div>
             </div>
           </div>

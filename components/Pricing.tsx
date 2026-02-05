@@ -24,97 +24,87 @@ interface PricingProps {
 const tiers = [
   {
     name: "Beginner",
+    subtitle: "Generate leads & test our service",
     price: "RM 1,888",
     period: "/mo",
     badge: null,
     oneTime: null,
     guarantee: false,
     contract: null,
-    discount: "RM 188/mo off",
+    discount: "10% off (6+ mo) · 15% off (10+ mo)",
     features: [
-      "Social Media Management",
-      "AI Creative Posters (up to 20)",
-      "Basic Copywriting",
-      "Monthly Performance Report",
+      { name: "AI Posters", included: true, detail: "Up to 20" },
+      { name: "AI Videos", included: false },
+      { name: "Digital Ads", included: true },
+      { name: "CRM Setup", included: false },
+      { name: "Reporting", included: true, detail: "Basic" },
+      { name: "Influencer Marketing", included: false },
+      { name: "Real Content Creation", included: false },
+      { name: "Social Media", included: true, detail: "FB & IG only" },
     ],
     highlighted: false,
   },
   {
     name: "Intermediate",
+    subtitle: "Systemize lead management with CRM & analytics",
     price: "RM 2,888",
     period: "/mo",
     badge: "Most Popular",
     oneTime: null,
     guarantee: true,
     contract: "Min 6 months",
-    discount: "RM 188/mo off",
+    discount: "10% off (6+ mo) · 15% off (10+ mo)",
     features: [
-      "Everything in Beginner",
-      "AI Creative Posters (up to 40)",
-      "AI Video Production (1/mo)",
-      "Digital Ads Management",
-      "Competitor Research",
-      "CRM Setup & Integration",
+      { name: "AI Posters", included: true, detail: "Up to 40" },
+      { name: "AI Videos", included: true, detail: "1/month" },
+      { name: "Digital Ads", included: true },
+      { name: "CRM Setup", included: true },
+      { name: "Reporting", included: true, detail: "Advanced" },
+      { name: "Influencer Marketing", included: false },
+      { name: "Real Content Creation", included: false },
+      { name: "Social Media", included: true, detail: "FB & IG only" },
     ],
     highlighted: true,
   },
   {
     name: "Advanced",
+    subtitle: "Scale your brand with content, influencers & every platform",
     price: "RM 6,888",
     period: "/mo",
     badge: null,
-    oneTime: "+RM 2,000 website",
+    oneTime: null,
     guarantee: true,
     contract: null,
-    discount: "RM 188/mo off",
+    discount: "10% off (6+ mo) · 15% off (10+ mo)",
     features: [
-      "Everything in Intermediate",
-      "AI Creative Posters (up to 70)",
-      "AI Video Production (4/mo)",
-      "Custom Website Design & Build",
-      "Website Hosting Included",
-      "Business Automation Setup",
-      "Influencer Marketing",
-      "Advanced Analytics & Reporting",
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    badge: "Custom",
-    oneTime: null,
-    guarantee: false,
-    contract: null,
-    discount: null,
-    features: [
-      "Everything in Advanced",
-      "Unlimited AI Creatives",
-      "Unlimited AI Videos",
-      "Dedicated Account Manager",
-      "Custom Integrations",
-      "Priority Support",
-      "White-label Options",
-      "Multi-brand Management",
+      { name: "AI Posters", included: true, detail: "Up to 70" },
+      { name: "AI Videos", included: true, detail: "4/month" },
+      { name: "Digital Ads", included: true },
+      { name: "CRM Setup", included: true },
+      { name: "Reporting", included: true, detail: "Advanced" },
+      { name: "Influencer Marketing", included: true },
+      { name: "Real Content Creation", included: true },
+      { name: "Social Media", included: true, detail: "Every Platform" },
     ],
     highlighted: false,
   },
 ];
 
 const individualServices = [
-  { name: "Website Design", price: "RM 988", unit: "" },
-  { name: "Website Hosting", price: "RM 288", unit: "/mo" },
-  { name: "Website Building", price: "RM 1,688", unit: "" },
   { name: "Social Media Management", price: "RM 888", unit: "/mo" },
-  { name: "AI Creative (up to 70 posters)", price: "RM 688", unit: "" },
-  { name: "High Quality AI Video", price: "RM 688", unit: "/video" },
-  { name: "Digital Ads Management", price: "RM 588", unit: "/mo" },
-  { name: "Copywriting", price: "RM 388", unit: "/mo" },
-  { name: "CRM Setup & Integration", price: "RM 1,288", unit: "" },
-  { name: "Business Automation", price: "RM 1,888", unit: "" },
-  { name: "Competitor Research", price: "RM 488", unit: "" },
-  { name: "Influencer Marketing", price: "RM 1,488", unit: "" },
+  { name: "AI Creative Posters (up to 70)", price: "RM 688", unit: "/batch" },
+  { name: "High-Quality AI Video", price: "RM 688", unit: "/video" },
+  { name: "Real Content Creation (4hr)", price: "RM 1,288", unit: "/session" },
+  { name: "Website Design + Building", price: "RM 2,676", unit: "/package" },
+  { name: "Website Hosting", price: "RM 288", unit: "/mo" },
+  { name: "CRM Setup & Integration", price: "RM 888", unit: "/mo" },
+  { name: "AI Chatbot", price: "RM 888", unit: "/mo" },
+  { name: "AI Voice Setup", price: "RM 888", unit: "/mo" },
+  { name: "Digital Ads Management (PPC)", price: "RM 588", unit: "/mo" },
+  { name: "Business Automation (Workflow)", price: "Contact us", unit: "" },
+  { name: "SEO Management", price: "Contact us", unit: "" },
+  { name: "Influencer Marketing", price: "RM 799", unit: "/mo" },
+  { name: "Advanced Analytics", price: "RM 488", unit: "" },
 ];
 
 const pricingFaqs = [
@@ -136,12 +126,12 @@ const pricingFaqs = [
   {
     question: "Are there any setup fees?",
     answer:
-      "No hidden setup fees for Beginner and Intermediate plans. The Advanced plan includes a one-time RM 2,000 fee for custom website design and development. Enterprise plans may have custom setup costs depending on requirements.",
+      "No hidden setup fees on any plan. All pricing is straightforward — what you see is what you pay.",
   },
   {
     question: "What's included in the prepay discount?",
     answer:
-      "When you prepay for 6 months or more, you save RM 188/month on any plan. That's over RM 1,100 in savings per year. The discount is applied automatically when you choose the prepay option.",
+      "Prepay 6 or more months on any plan and get 10% off. Prepay 10 or more months and get 15% off plus a free website (worth RM 2,676). The discount is applied automatically when you choose the prepay option.",
   },
   {
     question: "Do I own the content you create?",
@@ -192,19 +182,31 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+            className="relative rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm p-6 sm:p-8"
           >
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 text-cyan-400">
-              <IconDiscount2 className="h-7 w-7" />
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-6">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 text-cyan-400">
+                <IconDiscount2 className="h-7 w-7" />
+              </div>
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg font-semibold text-white mb-1">
+                  Save More with Prepay
+                </h3>
+                <p className="text-white/60 text-sm">
+                  The longer you commit, the more you save. Discounts are applied automatically.
+                </p>
+              </div>
             </div>
-            <div className="text-center sm:text-left">
-              <h3 className="text-lg font-semibold text-white mb-1">
-                Save RM 188/month with Prepay
-              </h3>
-              <p className="text-white/60 text-sm">
-                Prepay 6 months or more on any plan and save over RM 1,100 per
-                year. The discount is applied automatically.
-              </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                <p className="text-2xl font-bold gradient-text-cyan mb-1">10% Off</p>
+                <p className="text-sm text-white/60">Prepay 6+ months on any plan</p>
+              </div>
+              <div className="rounded-xl border border-cyan-500/20 bg-cyan-500/5 p-4 text-center">
+                <p className="text-2xl font-bold gradient-text-cyan mb-1">15% Off</p>
+                <p className="text-sm text-white/60">Prepay 10+ months</p>
+                <p className="text-xs text-cyan-400 mt-1">+ Free Website (worth RM 2,676)</p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -213,7 +215,7 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
       {/* Pricing Tiers */}
       <section className="relative py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {tiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -243,9 +245,10 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                 )}
 
                 {/* Tier Name */}
-                <h3 className="text-lg font-semibold text-white mb-4 mt-2">
+                <h3 className="text-lg font-semibold text-white mb-1 mt-2">
                   {tier.name}
                 </h3>
+                <p className="text-sm text-white/50 mb-4">{tier.subtitle}</p>
 
                 {/* Price */}
                 <div className="mb-6">
@@ -253,11 +256,6 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                     {tier.price}
                   </span>
                   <span className="text-white/50 text-sm">{tier.period}</span>
-                  {tier.price === "Custom" && (
-                    <p className="text-sm text-white/50 mt-2">
-                      Contact us for more information
-                    </p>
-                  )}
                 </div>
 
                 {/* Meta Info */}
@@ -288,11 +286,20 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                 <ul className="space-y-3 mb-8 flex-1">
                   {tier.features.map((feature) => (
                     <li
-                      key={feature}
-                      className="flex items-start gap-2 text-sm text-white/70"
+                      key={feature.name}
+                      className={`flex items-start gap-2 text-sm ${feature.included ? "text-white/70" : "text-white/30"}`}
                     >
-                      <IconCheck className="h-4 w-4 text-blue-400 shrink-0 mt-0.5" />
-                      {feature}
+                      {feature.included ? (
+                        <IconCheck className="h-4 w-4 text-blue-400 shrink-0 mt-0.5" />
+                      ) : (
+                        <IconX className="h-4 w-4 text-white/20 shrink-0 mt-0.5" />
+                      )}
+                      <span>
+                        {feature.name}
+                        {feature.detail && (
+                          <span className="text-white/40 ml-1">— {feature.detail}</span>
+                        )}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -306,7 +313,7 @@ export function Pricing({ onOpenLeadForm }: PricingProps) {
                       : "border border-white/20 text-white hover:bg-white/10 hover:border-white/30"
                   }`}
                 >
-                  {tier.price === "Custom" ? "Contact Us" : "Get Started"}
+                  Get Started
                 </button>
               </motion.div>
             ))}

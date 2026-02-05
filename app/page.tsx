@@ -15,7 +15,7 @@ import { LeadFormModal } from "@/components/LeadFormModal";
 
 // Partner logos
 import questEnergy from "@/components/partners/Untitled design (5).png";
-import assignSolar from "@/components/partners/Untitled design (6).png";
+import assignSolar from "@/components/partners/image.png";
 import KStructure from "@/components/partners/Untitled design (7).png";
 import Amsolar from "@/components/partners/3.png";
 import DE from "@/components/partners/Untitled design (12).png";
@@ -26,12 +26,12 @@ import raygosolar from "@/components/partners/Untitled design (13).png";
 import AD from "@/components/partners/Untitled design (14).png";
 import IPS from "@/components/partners/logo_footer.png";
 import IJRVenture from "@/components/partners/realIJRventure.png";
-import Vantage from "@/components/partners/whitevantage.png";
+import Vantage from "@/components/partners/vantage.png";
 import TwentyThree from "@/components/partners/twentythree.png";
 import TrueBioScience from "@/components/partners/truebioscience.png";
 import Macglo from "@/components/partners/Macglo.png";
-import Geosav from "@/components/partners/geosav.png";
-import ElevatedStudios from "@/components/partners/elevatedstud.png";
+import Geosav from "@/components/partners/geosav.jpg";
+import ElevatedStudios from "@/components/partners/elevatedstudios.png";
 
 export default function Home() {
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);

@@ -55,7 +55,7 @@ export default function LogoTicker({
             <div className="relative mx-auto max-w-[1200px] px-4 sm:px-10">
                 <div className="mb-6 text-center">
                     <span className="inline-flex items-center rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1 text-xs font-medium text-sky-300 backdrop-blur">
-                        Trusted by solar teams across Malaysia
+                        Our Partners
                     </span>
                 </div>
 
@@ -137,12 +137,12 @@ function LogoCard({
         group
         relative flex shrink-0 items-center justify-center
         rounded-2xl
-        bg-white/90
-        dark:bg-white/10
+        bg-white
+        dark:bg-white/90
         px-6 sm:px-8
         w-[160px] sm:w-[200px] md:w-[240px]
         h-20 sm:h-24 md:h-28
-        border border-white/20
+        border border-white/30
         shadow-[0_10px_40px_rgba(0,0,0,0.35)]
         backdrop-blur-md
         transition-transform duration-300

@@ -15,7 +15,6 @@ import {
   IconAd2,
   IconChartBar,
   IconWorld,
-  IconCode,
   IconServer,
   IconDatabase,
   IconRobot,
@@ -37,6 +36,8 @@ const servicesData: Record<string, {
   icon: React.ElementType;
   tagline: string;
   description: string;
+  price: string;
+  priceUnit: string;
   heroImage?: string;
   benefits: string[];
   features: { title: string; description: string }[];
@@ -48,6 +49,8 @@ const servicesData: Record<string, {
     name: "AI Creatives",
     icon: IconSparkles,
     tagline: "Generate stunning ad creatives in seconds",
+    price: "RM 688",
+    priceUnit: "/batch",
     description:
       "Leverage the power of AI to create high-converting ad creatives at scale. Our AI analyzes top-performing ads in your industry and generates unlimited variations optimized for engagement and conversions.",
     benefits: [
@@ -86,6 +89,8 @@ const servicesData: Record<string, {
     name: "AI Video Production",
     icon: IconVideo,
     tagline: "Professional videos at unprecedented scale",
+    price: "RM 688",
+    priceUnit: "/video",
     description:
       "Create scroll-stopping video content for social media, ads, and marketing at a fraction of traditional costs. Our AI-powered video production combines cutting-edge technology with creative expertise.",
     benefits: [
@@ -124,6 +129,8 @@ const servicesData: Record<string, {
     name: "Real Content Creation",
     icon: IconCamera,
     tagline: "Authentic content that connects",
+    price: "RM 1,288",
+    priceUnit: "/session",
     description:
       "Professional photography and videography services that capture your brand&apos;s authentic story. From product shoots to lifestyle content, we create visuals that resonate with your audience.",
     benefits: [
@@ -162,6 +169,8 @@ const servicesData: Record<string, {
     name: "Social Media Management",
     icon: IconBrandFacebook,
     tagline: "Full-service social media excellence",
+    price: "RM 888",
+    priceUnit: "/mo",
     description:
       "Comprehensive social media management across all major platforms. We handle everything from content strategy to community management, ensuring your brand stays relevant and engaged.",
     platforms: [
@@ -208,6 +217,8 @@ const servicesData: Record<string, {
     name: "Influencer Marketing",
     icon: IconUsers,
     tagline: "Amplify your reach through authentic voices",
+    price: "RM 799",
+    priceUnit: "/mo",
     description:
       "Connect with the right influencers to authentically promote your brand. We handle everything from influencer discovery to campaign management and ROI tracking.",
     benefits: [
@@ -246,6 +257,8 @@ const servicesData: Record<string, {
     name: "Digital Advertising",
     icon: IconAd2,
     tagline: "Data-driven campaigns that convert",
+    price: "RM 588",
+    priceUnit: "/mo",
     description:
       "Expert paid advertising management across Meta, Google, TikTok, and more. We combine AI-powered optimization with human expertise to maximize your ROAS.",
     benefits: [
@@ -284,6 +297,8 @@ const servicesData: Record<string, {
     name: "Analytics & Reporting",
     icon: IconChartBar,
     tagline: "Insights that drive decisions",
+    price: "RM 488",
+    priceUnit: "",
     description:
       "Comprehensive analytics and reporting solutions that give you complete visibility into your marketing performance. Make data-driven decisions with confidence.",
     benefits: [
@@ -319,17 +334,20 @@ const servicesData: Record<string, {
     ],
   },
   "website-design": {
-    name: "Website Design",
+    name: "Website Design & Development",
     icon: IconWorld,
-    tagline: "Beautiful designs that convert",
+    tagline: "Beautiful designs that convert, built to scale",
+    price: "RM 2,676",
+    priceUnit: "/package",
     description:
-      "Stunning, conversion-focused website designs that capture your brand essence and drive results. Our designs combine aesthetics with strategic UX to maximize conversions.",
+      "Stunning, conversion-focused website design and custom development in one package. We combine aesthetics with strategic UX and modern technology to deliver fast, secure, and scalable websites.",
     benefits: [
       "Mobile-first responsive design",
+      "Modern tech stack (React, Next.js)",
       "Conversion rate optimization",
       "Brand-aligned visual identity",
-      "User experience focused",
       "SEO-optimized structure",
+      "Easy content management",
     ],
     features: [
       {
@@ -337,60 +355,22 @@ const servicesData: Record<string, {
         description: "Research-backed designs that users love.",
       },
       {
-        title: "Brand Integration",
-        description: "Designs that perfectly reflect your brand.",
+        title: "Custom Development",
+        description: "Tailored solutions built with modern technologies.",
       },
       {
         title: "Responsive Design",
         description: "Flawless experience on all devices.",
       },
       {
-        title: "Conversion Focus",
-        description: "Strategic design elements that drive action.",
+        title: "E-commerce & CMS",
+        description: "Full online store and easy content management.",
       },
     ],
     process: [
-      { step: "01", title: "Discovery", description: "Understand your brand and goals." },
-      { step: "02", title: "Wireframes", description: "Structure and user flow planning." },
-      { step: "03", title: "Design", description: "High-fidelity visual design." },
-      { step: "04", title: "Handoff", description: "Development-ready design files." },
-    ],
-  },
-  "website-development": {
-    name: "Website Development",
-    icon: IconCode,
-    tagline: "Modern web development that scales",
-    description:
-      "Custom web development using cutting-edge technologies. From landing pages to complex web applications, we build fast, secure, and scalable solutions.",
-    benefits: [
-      "Modern tech stack (React, Next.js)",
-      "Lightning-fast performance",
-      "SEO optimized",
-      "Secure and scalable",
-      "Easy content management",
-    ],
-    features: [
-      {
-        title: "Custom Development",
-        description: "Tailored solutions for your specific needs.",
-      },
-      {
-        title: "E-commerce",
-        description: "Full online store functionality.",
-      },
-      {
-        title: "CMS Integration",
-        description: "Easy content management for your team.",
-      },
-      {
-        title: "API Integrations",
-        description: "Connect with your existing tools.",
-      },
-    ],
-    process: [
-      { step: "01", title: "Planning", description: "Technical requirements and architecture." },
-      { step: "02", title: "Development", description: "Agile development with regular updates." },
-      { step: "03", title: "Testing", description: "Thorough QA and performance testing." },
+      { step: "01", title: "Discovery", description: "Understand your brand, goals, and requirements." },
+      { step: "02", title: "Design", description: "Wireframes, user flows, and high-fidelity visuals." },
+      { step: "03", title: "Development", description: "Build, test, and optimize for performance." },
       { step: "04", title: "Launch", description: "Deployment and ongoing support." },
     ],
   },
@@ -398,6 +378,8 @@ const servicesData: Record<string, {
     name: "Website Hosting",
     icon: IconServer,
     tagline: "Fast, secure, reliable hosting",
+    price: "RM 288",
+    priceUnit: "/mo",
     description:
       "Enterprise-grade hosting solutions that keep your website fast, secure, and always online. We handle all the technical details so you can focus on your business.",
     benefits: [
@@ -436,6 +418,8 @@ const servicesData: Record<string, {
     name: "CRM Integration",
     icon: IconDatabase,
     tagline: "Unified customer data management",
+    price: "RM 888",
+    priceUnit: "/mo",
     description:
       "Seamless CRM setup and integration that gives you a 360-degree view of your customers. Connect all your tools and automate your sales pipeline.",
     benefits: [
@@ -474,6 +458,8 @@ const servicesData: Record<string, {
     name: "AI Chatbot & Voice",
     icon: IconRobot,
     tagline: "24/7 AI-powered customer engagement",
+    price: "RM 888",
+    priceUnit: "/mo",
     description:
       "Deploy intelligent AI chatbots and voice agents that handle customer inquiries, qualify leads, and book appointments around the clock. Never miss a lead again.",
     benefits: [
@@ -512,6 +498,8 @@ const servicesData: Record<string, {
     name: "SEO & PPC",
     icon: IconSeo,
     tagline: "Get found. Get clicks. Get customers.",
+    price: "Contact us",
+    priceUnit: "",
     description:
       "Drive sustainable organic traffic with SEO and capture high-intent buyers with PPC advertising. We combine search engine optimization with pay-per-click campaigns to maximize your visibility and ROI across Google and other search engines.",
     benefits: [
@@ -558,6 +546,8 @@ const servicesData: Record<string, {
     name: "Workflow Automation",
     icon: IconSettings,
     tagline: "Automate everything, scale faster",
+    price: "Contact us",
+    priceUnit: "",
     description:
       "Comprehensive workflow automation that eliminates repetitive tasks and streamlines your operations. From lead routing to follow-ups to booking systems.",
     benefits: [
@@ -662,7 +652,16 @@ export default function ServicePage() {
             <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl mb-4">
               {service.name}
             </h1>
-            <p className="text-xl text-blue-400 mb-6">{service.tagline}</p>
+            <p className="text-xl text-blue-400 mb-4">{service.tagline}</p>
+            {service.price !== "Contact us" ? (
+              <span className="inline-flex items-center px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-sm font-semibold text-cyan-300 backdrop-blur-sm mb-6">
+                {service.price}<span className="text-cyan-300/60 font-normal">{service.priceUnit}</span>
+              </span>
+            ) : (
+              <span className="inline-flex items-center px-4 py-2 rounded-full border border-white/20 bg-white/5 text-sm font-medium text-white/60 backdrop-blur-sm mb-6">
+                Custom pricing — contact us
+              </span>
+            )}
             <p className="text-lg text-white/60 mb-8">{service.description}</p>
             <button
               onClick={openLeadForm}
@@ -778,8 +777,61 @@ export default function ServicePage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Pricing */}
       <section className="relative py-20 bg-[#0a0a0a]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-blue-500/10 via-transparent to-cyan-500/10 backdrop-blur-sm p-8 sm:p-10 text-center">
+              <span className="inline-flex items-center px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white/60 backdrop-blur-sm mb-6">
+                Pricing
+              </span>
+              {service.price !== "Contact us" ? (
+                <>
+                  <div className="mb-4">
+                    <span className="text-4xl sm:text-5xl font-bold gradient-text-cyan">
+                      {service.price}
+                    </span>
+                    <span className="text-white/50 text-lg">{service.priceUnit}</span>
+                  </div>
+                  <p className="text-white/60 mb-6">
+                    Individual service pricing. Save more with our bundled packages.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h3 className="text-2xl font-bold text-white mb-4">Custom Pricing</h3>
+                  <p className="text-white/60 mb-6">
+                    This service is tailored to your needs. Contact us for a custom quote.
+                  </p>
+                </>
+              )}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  onClick={openLeadForm}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-0.5"
+                >
+                  {service.price !== "Contact us" ? "Get Started" : "Contact Us"}
+                  <IconArrowRight className="h-4 w-4" />
+                </button>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white border border-white/20 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-white/30"
+                >
+                  View Bundled Packages
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="relative py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
