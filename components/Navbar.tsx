@@ -392,16 +392,16 @@ export function Navbar({ onOpenLeadForm }: NavbarProps) {
                 <div className="mt-8 pt-8 border-t border-white/10 space-y-3">
                   <p className="text-sm text-white/50">Get in touch</p>
                   <a
-                    href="mailto:hello@agenz.my"
+                    href="mailto:kingjoe@agenz.my"
                     className="block text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    hello@agenz.my
+                    kingjoe@agenz.my
                   </a>
                   <a
-                    href="tel:+60182915479"
+                    href="tel:+60127507092"
                     className="block text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    +60 18-291 5479
+                    +60 12-750 7092
                   </a>
                 </div>
               </div>

@@ -266,7 +266,7 @@ function addSubmission(sheet, data, formType) {
 function sendEmailNotification(data, formType) {
   // Uncomment and configure the email settings below to enable notifications
   /*
-  const NOTIFICATION_EMAIL = 'hello@agenz.my'; // Change to your email
+  const NOTIFICATION_EMAIL = 'kingjoe@agenz.my'; // Change to your email
 
   const subject = formType === 'lead-form'
     ? '🚀 New Lead: ' + (data.fullName || 'Unknown')

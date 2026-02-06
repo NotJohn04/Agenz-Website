@@ -80,18 +80,18 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:hello@agenz.my"
+                href="mailto:kingjoe@agenz.my"
                 className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
               >
                 <IconMail className="h-5 w-5 text-blue-400" />
-                <span>hello@agenz.my</span>
+                <span>kingjoe@agenz.my</span>
               </a>
               <a
-                href="tel:+60182915479"
+                href="tel:+60127507092"
                 className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
               >
                 <IconPhone className="h-5 w-5 text-blue-400" />
-                <span>+60 18-291 5479</span>
+                <span>+60 12-750 7092</span>
               </a>
               <div className="flex items-start gap-3 text-white/60">
                 <IconMapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />

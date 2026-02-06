@@ -23,20 +23,20 @@ const contactInfo = [
   {
     icon: IconMail,
     label: "Email",
-    value: "hello@agenz.my",
-    href: "mailto:hello@agenz.my",
+    value: "kingjoe@agenz.my",
+    href: "mailto:kingjoe@agenz.my",
   },
   {
     icon: IconPhone,
     label: "Phone",
-    value: "+60 18-291 5479",
-    href: "tel:+60182915479",
+    value: "+60 12-750 7092",
+    href: "tel:+60127507092",
   },
   {
     icon: IconBrandWhatsapp,
     label: "WhatsApp",
-    value: "+60 18-291 5479",
-    href: "https://wa.me/60182915479",
+    value: "+60 12-750 7092",
+    href: "https://wa.me/60127507092",
   },
   {
     icon: IconMapPin,
