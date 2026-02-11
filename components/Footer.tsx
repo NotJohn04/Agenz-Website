@@ -43,7 +43,7 @@ const socialLinks = [
   { name: "Instagram", icon: IconBrandInstagram, href: "https://www.instagram.com/agenz_my/" },
   { name: "LinkedIn", icon: IconBrandLinkedin, href: "https://linkedin.com/company/agenz-my" },
   { name: "TikTok", icon: IconBrandTiktok, href: "https://tiktok.com/@agenz.my" },
-  { name: "YouTube", icon: IconBrandYoutube, href: "https://youtube.com/@agenz.my" },
+  { name: "YouTube", icon: IconBrandYoutube, href: "https://www.youtube.com/@agenzmy" },
   { name: "X", icon: IconBrandX, href: "https://x.com/agenz_my" },
 ];
 

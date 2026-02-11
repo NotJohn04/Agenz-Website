@@ -30,7 +30,7 @@ import Vantage from "@/components/partners/vantage.png";
 import TwentyThree from "@/components/partners/twentythree.png";
 import TrueBioScience from "@/components/partners/truebioscience.png";
 import Macglo from "@/components/partners/Macglo.png";
-import Geosav from "@/components/partners/geosav.jpg";
+import Geosav from "@/components/partners/geosav.png";
 import ElevatedStudios from "@/components/partners/elevatedstudios.png";
 
 export default function Home() {
