@@ -93,7 +93,7 @@ const tiers = [
 const individualServices = [
   { name: "Social Media Management", price: "RM 888", unit: "/mo" },
   { name: "AI Creative Posters (up to 70)", price: "RM 688", unit: "/batch" },
-  { name: "High-Quality AI Video", price: "RM 688", unit: "/video" },
+  { name: "High-Quality AI Video", price: "RM 488", unit: "/video" },
   { name: "Real Content Creation (4hr)", price: "RM 1,288", unit: "/session" },
   { name: "Website Design + Building", price: "RM 2,676", unit: "/package" },
   { name: "Website Hosting", price: "RM 288", unit: "/mo" },
@@ -101,6 +101,7 @@ const individualServices = [
   { name: "AI Chatbot", price: "RM 888", unit: "/mo" },
   { name: "AI Voice Setup", price: "RM 888", unit: "/mo" },
   { name: "Digital Ads Management (PPC)", price: "RM 588", unit: "/mo" },
+  { name: "Landing Page", price: "RM 1,367", unit: "/page" },
   { name: "Business Automation (Workflow)", price: "Contact us", unit: "" },
   { name: "SEO Management", price: "Contact us", unit: "" },
   { name: "Influencer Marketing", price: "RM 799", unit: "/mo" },

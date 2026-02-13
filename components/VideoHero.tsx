@@ -116,11 +116,13 @@ export function VideoHero({ onOpenLeadForm }: VideoHeroProps) {
 
           {/* Secondary CTA */}
           <a
-            href="#how-it-works"
+            href="https://profile.agenz.my"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-white/40"
           >
             <IconPlayerPlay className="h-5 w-5" />
-            See How It Works
+            View Our Company Profile
           </a>
         </motion.div>
 

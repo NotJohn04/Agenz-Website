@@ -42,7 +42,7 @@ const allServices = [
         icon: IconVideo,
         description: "Create professional video content at scale with AI-powered tools.",
         features: ["Short-form content", "Product videos", "Social media clips"],
-        price: "RM 688/video",
+        price: "RM 488/video",
       },
       {
         name: "Real Content Creation",
@@ -101,6 +101,14 @@ const allServices = [
         description: "Beautiful, conversion-focused website design and custom development in one package.",
         features: ["UI/UX design", "React/Next.js", "Mobile-first"],
         price: "RM 2,676/pkg",
+      },
+      {
+        name: "Landing Page",
+        slug: "landing-page",
+        icon: IconFileText,
+        description: "High-converting landing pages designed to capture leads and drive action.",
+        features: ["Custom design", "Mobile responsive", "Conversion optimized"],
+        price: "RM 1,367/page",
       },
       {
         name: "Website Hosting",
