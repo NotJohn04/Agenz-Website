@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
-import { IconPlayerPlay, IconArrowRight } from "@tabler/icons-react";
+import { IconArrowRight } from "@tabler/icons-react";
 
 
 interface VideoHeroProps {
@@ -113,17 +113,6 @@ export function VideoHero({ onOpenLeadForm }: VideoHeroProps) {
             <IconArrowRight className="relative z-10 h-5 w-5 transition-transform group-hover:translate-x-1" />
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </button>
-
-          {/* Secondary CTA */}
-          <a
-            href="https://profile.agenz.my"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white border border-white/20 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-white/40"
-          >
-            <IconPlayerPlay className="h-5 w-5" />
-            View Our Company Profile
-          </a>
         </motion.div>
 
         {/* Stats Row */}
