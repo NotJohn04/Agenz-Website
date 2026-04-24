@@ -31,11 +31,6 @@ const faqs = [
       "No technical knowledge required. We handle all the setup, integration, and ongoing optimization. You'll get a simple dashboard to monitor performance, and our team is always available for support. Your job is to close deals - we handle everything else.",
   },
   {
-    question: "How much does it cost to work with Agenz?",
-    answer:
-      "Our pricing is customized based on your business needs, volume, and the services you require. We offer packages starting from RM 5,000/month for small businesses up to comprehensive enterprise solutions. Book a strategy call to get a tailored quote.",
-  },
-  {
     question: "What makes Agenz different from other marketing agencies?",
     answer:
       "We're not a traditional marketing agency - we're an AI automation company. While others focus on running ads, we build complete autonomous systems that handle everything from lead generation to qualification to booking. Our AI works 24/7, responds instantly, and continuously improves through data.",

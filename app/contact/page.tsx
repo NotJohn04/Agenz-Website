@@ -316,7 +316,7 @@ export default function ContactPage() {
                           General Inquiry
                         </option>
                         <option value="services" className="bg-[#0a0a0a]">
-                          Services & Pricing
+                          Services
                         </option>
                         <option value="partnership" className="bg-[#0a0a0a]">
                           Partnership Opportunity

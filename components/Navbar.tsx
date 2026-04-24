@@ -31,44 +31,43 @@ const serviceCategories = [
   {
     title: "AI Creative Solutions",
     items: [
-      { name: "AI Creatives", href: "/services/ai-creatives", icon: IconSparkles, price: "RM 688/batch" },
-      { name: "AI Video Production", href: "/services/ai-videos", icon: IconVideo, price: "RM 688/video" },
-      { name: "Real Content Creation", href: "/services/content-creation", icon: IconCamera, price: "RM 1,288/session" },
+      { name: "AI Creatives", href: "/services/ai-creatives", icon: IconSparkles },
+      { name: "AI Video Production", href: "/services/ai-videos", icon: IconVideo },
+      { name: "Real Content Creation", href: "/services/content-creation", icon: IconCamera },
     ],
   },
   {
     title: "Digital Marketing",
     items: [
-      { name: "Social Media Management", href: "/services/social-media-management", icon: IconBrandFacebook, price: "RM 888/mo" },
-      { name: "Influencer Marketing", href: "/services/influencer-marketing", icon: IconUsers, price: "RM 799/mo" },
-      { name: "Advertisement", href: "/services/advertising", icon: IconAd2, price: "RM 588/mo" },
-      { name: "Analytics & Reporting", href: "/services/analytics-reporting", icon: IconChartBar, price: "RM 488" },
+      { name: "Social Media Management", href: "/services/social-media-management", icon: IconBrandFacebook },
+      { name: "Influencer Marketing", href: "/services/influencer-marketing", icon: IconUsers },
+      { name: "Advertisement", href: "/services/advertising", icon: IconAd2 },
+      { name: "Analytics & Reporting", href: "/services/analytics-reporting", icon: IconChartBar },
     ],
   },
   {
     title: "Web Solutions",
     items: [
-      { name: "Website Design & Development", href: "/services/website-design", icon: IconWorld, price: "RM 2,676/pkg" },
-      { name: "Website Hosting", href: "/services/website-hosting", icon: IconServer, price: "RM 288/mo" },
-      { name: "SEO & PPC", href: "/services/seo-ppc", icon: IconSeo, price: "Contact us" },
+      { name: "Website Design & Development", href: "/services/website-design", icon: IconWorld },
+      { name: "Website Hosting", href: "/services/website-hosting", icon: IconServer },
+      { name: "SEO & PPC", href: "/services/seo-ppc", icon: IconSeo },
     ],
   },
   {
     title: "Business Automation",
     items: [
-      { name: "CRM Integration", href: "/services/crm-integration", icon: IconDatabase, price: "RM 888/mo" },
-      { name: "AI Chatbot & Voice", href: "/services/ai-chatbot", icon: IconRobot, price: "RM 888/mo" },
-      { name: "Automated Quotations", href: "/services/automation", icon: IconFileText, price: "Contact us" },
-      { name: "Lead Distribution", href: "/services/automation", icon: IconShare, price: "Contact us" },
-      { name: "Calendar Booking", href: "/services/automation", icon: IconCalendar, price: "Contact us" },
-      { name: "Workflow Automation", href: "/services/automation", icon: IconSettings, price: "Contact us" },
+      { name: "CRM Integration", href: "/services/crm-integration", icon: IconDatabase },
+      { name: "AI Chatbot & Voice", href: "/services/ai-chatbot", icon: IconRobot },
+      { name: "Automated Quotations", href: "/services/automation", icon: IconFileText },
+      { name: "Lead Distribution", href: "/services/automation", icon: IconShare },
+      { name: "Calendar Booking", href: "/services/automation", icon: IconCalendar },
+      { name: "Workflow Automation", href: "/services/automation", icon: IconSettings },
     ],
   },
 ];
 
 const navItems = [
   { name: "Services", href: "/services", hasDropdown: true },
-  { name: "Pricing", href: "/pricing", hasDropdown: false },
   { name: "About Us", href: "/about", hasDropdown: false },
   { name: "Blog", href: "/blog", hasDropdown: false },
   { name: "Contact", href: "/contact", hasDropdown: false },
@@ -247,12 +246,7 @@ export function Navbar({ onOpenLeadForm }: NavbarProps) {
                                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-blue-400 transition-colors group-hover:bg-blue-500/20">
                                   <item.icon className="h-4 w-4" />
                                 </div>
-                                <div className="flex flex-col">
-                                  <span>{item.name}</span>
-                                  <span className={`text-xs ${item.price === "Contact us" ? "text-white/30" : "text-cyan-400/70"}`}>
-                                    {item.price}
-                                  </span>
-                                </div>
+                                <span>{item.name}</span>
                               </a>
                             </li>
                           ))}
@@ -342,15 +336,10 @@ export function Navbar({ onOpenLeadForm }: NavbarProps) {
                                             <a
                                               href={service.href}
                                               onClick={() => setIsMobileMenuOpen(false)}
-                                              className="flex items-center justify-between py-2 text-sm text-white/60 hover:text-white transition-colors"
+                                              className="flex items-center gap-2 py-2 text-sm text-white/60 hover:text-white transition-colors"
                                             >
-                                              <span className="flex items-center gap-2">
-                                                <service.icon className="h-4 w-4 text-blue-400" />
-                                                {service.name}
-                                              </span>
-                                              <span className={`text-xs ${service.price === "Contact us" ? "text-white/30" : "text-cyan-400/70"}`}>
-                                                {service.price}
-                                              </span>
+                                              <service.icon className="h-4 w-4 text-blue-400" />
+                                              {service.name}
                                             </a>
                                           </li>
                                         ))}

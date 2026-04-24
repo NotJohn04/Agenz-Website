@@ -34,7 +34,6 @@ const allServices = [
         icon: IconSparkles,
         description: "Generate stunning, high-converting ad creatives powered by AI in seconds.",
         features: ["Unlimited variations", "A/B testing ready", "Brand consistency"],
-        price: "RM 688/batch",
       },
       {
         name: "AI Video Production",
@@ -42,7 +41,6 @@ const allServices = [
         icon: IconVideo,
         description: "Create professional video content at scale with AI-powered tools.",
         features: ["Short-form content", "Product videos", "Social media clips"],
-        price: "RM 488/video",
       },
       {
         name: "Real Content Creation",
@@ -50,7 +48,6 @@ const allServices = [
         icon: IconCamera,
         description: "Professional photography and videography for authentic brand content.",
         features: ["On-location shoots", "Studio production", "Post-production"],
-        price: "RM 1,288/session",
       },
     ],
   },
@@ -63,15 +60,13 @@ const allServices = [
         icon: IconBrandFacebook,
         description: "Full-service management across all major platforms.",
         features: ["Content calendar", "Community management", "Analytics"],
-        price: "RM 888/mo",
       },
       {
         name: "Influencer Marketing",
         slug: "influencer-marketing",
         icon: IconUsers,
-        description: "Connect with the right influencers to amplify your brand.",
-        features: ["Influencer matching", "Campaign management", "ROI tracking"],
-        price: "RM 799/mo",
+        description: "Invite-only access to vetted creators and tier-1 talent — matched, briefed, and managed by us.",
+        features: ["Hand-picked creator roster", "White-glove campaign management", "Performance & brand-safety guardrails"],
       },
       {
         name: "Advertisement",
@@ -79,7 +74,6 @@ const allServices = [
         icon: IconAd2,
         description: "Data-driven paid advertising across all digital channels.",
         features: ["Meta Ads", "Google Ads", "TikTok Ads"],
-        price: "RM 588/mo",
       },
       {
         name: "Analytics & Reporting",
@@ -87,7 +81,6 @@ const allServices = [
         icon: IconChartBar,
         description: "Comprehensive insights and performance tracking.",
         features: ["Custom dashboards", "Weekly reports", "Attribution modeling"],
-        price: "RM 488",
       },
     ],
   },
@@ -98,9 +91,8 @@ const allServices = [
         name: "Website Design & Development",
         slug: "website-design",
         icon: IconWorld,
-        description: "Beautiful, conversion-focused website design and custom development in one package.",
+        description: "Beautiful, conversion-focused website design and custom development built bespoke for your brand.",
         features: ["UI/UX design", "React/Next.js", "Mobile-first"],
-        price: "RM 2,676/pkg",
       },
       {
         name: "Landing Page",
@@ -108,7 +100,6 @@ const allServices = [
         icon: IconFileText,
         description: "High-converting landing pages designed to capture leads and drive action.",
         features: ["Custom design", "Mobile responsive", "Conversion optimized"],
-        price: "RM 1,367/page",
       },
       {
         name: "Website Hosting",
@@ -116,7 +107,6 @@ const allServices = [
         icon: IconServer,
         description: "Fast, secure, and reliable hosting solutions.",
         features: ["SSL included", "Daily backups", "99.9% uptime"],
-        price: "RM 288/mo",
       },
     ],
   },
@@ -129,7 +119,6 @@ const allServices = [
         icon: IconDatabase,
         description: "Seamless CRM setup and integration for better lead management.",
         features: ["HubSpot", "Salesforce", "Custom CRM"],
-        price: "RM 888/mo",
       },
       {
         name: "AI Chatbot & Voice",
@@ -137,7 +126,6 @@ const allServices = [
         icon: IconRobot,
         description: "24/7 AI-powered customer engagement across all channels.",
         features: ["WhatsApp", "Website chat", "Voice AI"],
-        price: "RM 888/mo",
       },
       {
         name: "Workflow Automation",
@@ -145,7 +133,6 @@ const allServices = [
         icon: IconSettings,
         description: "Automate repetitive tasks and streamline operations.",
         features: ["Lead routing", "Follow-ups", "Booking systems"],
-        price: "Contact us",
       },
     ],
   },
@@ -258,14 +245,9 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
-                        {service.name}
-                      </h3>
-                      <span className={`text-xs font-medium whitespace-nowrap mt-1 ${service.price === "Contact us" ? "text-white/40" : "text-cyan-400"}`}>
-                        {service.price}
-                      </span>
-                    </div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
+                      {service.name}
+                    </h3>
                     <p className="text-sm text-white/60 mb-4">{service.description}</p>
 
                     {/* Features */}
